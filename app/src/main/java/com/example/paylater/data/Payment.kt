@@ -1,6 +1,6 @@
 package com.example.paylater.data
 
-import androidx.annotation.DrawableRes
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.paylater.R
@@ -21,9 +21,9 @@ data class Payment(
 
 fun Int.getMode(): String {
     return when(this) {
-        0 -> "G-pay"
-        1 -> "Account"
-        2 -> "Cash Later"
+        0 -> "Cash"
+        1 -> "UPI"
+        2 -> "Credit"
         else -> {"Mode Error"}
     }
 }
